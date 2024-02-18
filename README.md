@@ -7,7 +7,7 @@ Las tareas a realizar son:
 1. Estudiar la documentación adjunta en la carpeta `docs`
 2. Implementar el controlador PostController según la especificación de la API proporcionada
 
-Para llevar a cabo el punto 2, solo será necesario 
+Para llevar a cabo el punto 2, solo será necesario
 completar la clase `PostController`, añadiendo los métodos
 y anotaciones necesarias para exponer los _endpoints_ indicados
 por la API. Toda la gestión de publicaciones o _posts_ se lleva
@@ -15,6 +15,20 @@ a cabo mediante la interfaz de servicio `PostService`, implementada
 por la clase `PostServiceImpl`. Para poder usarla, solo será necesario
 inyectarla dentro de la clase con las anotaciones de Spring necesarias.
 
+Cabe señalar que a la hora de cargar el proyecto, habrá errores sintácticos
+en la interfaz `PostService` y la clase `PostServiceImpl`. Esto se debe a
+que se han eliminado las clases que modelan las entidades y _data transfer objects_
+correspondientes a las instancias de publicaciones y comentarios. Parte del trabajo
+será crear las clases que faltan de acuerdo a la especificación de la API. La lista
+de clases completa está en la siguiente relación:
+- EditPostInput
+- Post
+- CreateCommentInput
+- Comment
+- PostFilter
+- CreatePostInput
+- ApiError
+- ResourceDeletionStatus
 ## Documentación API
 
 La documentación de la API que habrá que desarrollar se encuentra embebida en un servidor

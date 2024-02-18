@@ -1,15 +1,17 @@
 package com.example.blogapi.services;
 
-import com.example.blogapi.dtos.CreateCommentInput;
-import com.example.blogapi.dtos.CreatePostInput;
-import com.example.blogapi.dtos.EditPostInput;
-import com.example.blogapi.dtos.PostFilter;
-import com.example.blogapi.entities.Comment;
-import com.example.blogapi.entities.Post;
-
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Interfaz del servicio de publicaciones.
+ *
+ * @implNote Observarás que hay errores de código debido
+ * a que faltan las definiciones de las clases que modelan
+ * los posts, comentarios y DTOs de entrada y salida. Parte
+ * del trabajo consiste en crear dichas clases en los paquetes
+ * apropiados.
+ */
 public interface PostService {
     /**
      * Devuelve un post dado su identificador

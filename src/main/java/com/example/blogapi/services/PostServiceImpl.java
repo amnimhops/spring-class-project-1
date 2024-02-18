@@ -1,11 +1,5 @@
 package com.example.blogapi.services;
 
-import com.example.blogapi.dtos.CreateCommentInput;
-import com.example.blogapi.dtos.CreatePostInput;
-import com.example.blogapi.dtos.EditPostInput;
-import com.example.blogapi.dtos.PostFilter;
-import com.example.blogapi.entities.Comment;
-import com.example.blogapi.entities.Post;
 import com.example.blogapi.errors.ResourceNotFoundException;
 import com.example.blogapi.errors.ServiceException;
 import org.springframework.stereotype.Service;
