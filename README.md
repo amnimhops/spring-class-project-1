@@ -41,3 +41,8 @@ Esto ejecutará una versión funcional completa del proyecto que hay que desarro
 de la documentación en formato OpenAPI. Las URLs de acceso son:
 - URL de la API terminada : http://localhost:8080/posts
 - URL de la documentación : http://localhost:8080/swagger-ui/index.html
+
+Adicionalmente, hay una copia de la documentación en versión PDF en:
+```
+docs\api-documentation.pdf
+```
