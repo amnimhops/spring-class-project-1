@@ -1,5 +1,7 @@
 package com.example.blogapi.services;
 
+import com.example.blogapi.model.*;
+
 import java.util.List;
 import java.util.Optional;
 
