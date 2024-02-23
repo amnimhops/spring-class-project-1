@@ -32,14 +32,14 @@ public class PostController {
 
     //añade una nueva publicacion
     @PostMapping("/")
-    public ResponseEntity<?> createPost(CreatePostInput postInput){
+    public ResponseEntity<?> createPost(@RequestBody CreatePostInput postInput){
         Post newPost = postService.createPost(postInput);
         return ResponseEntity.ok(newPost);
     }
 
     //buscar publicaciones por filtro
     @PostMapping("/search")
-    public ResponseEntity<List<Post>> findPost(PostFilter postFilter){
+    public ResponseEntity<List<Post>> findPost(@RequestBody PostFilter postFilter){
         List<Post> publicFilter = postService.findPosts(postFilter);
 
         return ResponseEntity.ok(publicFilter);
@@ -49,7 +49,7 @@ public class PostController {
     //duda entre requestparam y pathvariable
     @PostMapping("/{id}/comments")
     public ResponseEntity<Comment> addCommentToPost(@RequestParam("id") String postId,
-                                                    CreateCommentInput commentInput){
+                                                    @RequestBody CreateCommentInput commentInput){
         try {
             Comment newComment = postService.addComment(postId,commentInput);
             return ResponseEntity.ok(newComment);
@@ -81,8 +81,9 @@ public class PostController {
     }
 
     //Editar publicacion mediante el id
+    @PutMapping("/{id}")
     public ResponseEntity<Post> updatePostById(@PathVariable String id,
-                                               EditPostInput editPostInput){
+                                               @RequestBody EditPostInput editPostInput){
         try{
             Post updatePost = postService.editPost(id,editPostInput);
             return ResponseEntity.ok(updatePost);
