@@ -2,6 +2,7 @@ package com.example.blogapi.services;
 
 import com.example.blogapi.errors.ResourceNotFoundException;
 import com.example.blogapi.errors.ServiceException;
+import com.example.blogapi.model.*;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
