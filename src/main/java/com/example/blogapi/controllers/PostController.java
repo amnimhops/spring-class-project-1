@@ -48,7 +48,7 @@ public class PostController {
     //Identificador de la publicación donde se desea comentar
     //duda entre requestparam y pathvariable
     @PostMapping("/{id}/comments")
-    public ResponseEntity<Comment> addCommentToPost(@RequestParam("id") String postId,
+    public ResponseEntity<Comment> addCommentToPost(@PathVariable String postId,
                                                     @RequestBody CreateCommentInput commentInput){
         try {
             Comment newComment = postService.addComment(postId,commentInput);
@@ -104,6 +104,5 @@ public class PostController {
         }catch (ResourceNotFoundException e){
             return ResponseEntity.notFound().build();
         }
-
     }
 }
